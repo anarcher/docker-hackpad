@@ -11,7 +11,9 @@ RUN chown hackpad:hackpad /home/hackpad
 
 WORKDIR /home/hackpad
 
-RUN git clone --depth 1 https://github.com/dropbox/hackpad.git && rm -rf hackpad/.git
+#RUN git clone --depth 1 https://github.com/dropbox/hackpad.git && rm -rf hackpad/.git
+RUN git clone --depth 1 https://github.com/spikeekips/hackpad.git && rm -rf hackpad/.git
+
 ADD exports.sh hackpad/bin/exports.sh
 
 RUN mkdir -p lib/ data/logs/
